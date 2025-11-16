@@ -1,0 +1,32 @@
+# Node.js dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Logs
+logs/
+*.log
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# IDE and editor files
+.vscode/
+.idea/
+
+# Environment variables
+.env
+
+# Dependency directories for other frameworks (e.g., Vue, React)
+.nuxt/
+.next/
+
+# Git files
+.git/
+
+# Temporary files
+*.tmp
+*.bak
