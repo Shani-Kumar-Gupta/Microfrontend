@@ -26,7 +26,7 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-        library: { type: "module" },
+        // library: { type: "module" },
 
         // For remotes (please adjust)
         // name: "productNgHostApp",
@@ -36,10 +36,12 @@ module.exports = {
         // },        
         
         // For hosts (please adjust)
-        // remotes: {
-        //     "mfe1": "http://localhost:3000/remoteEntry.js",
-
-        // },
+        remotes: {
+            'headerMFE': "headerMFE@http://localhost:4201/remoteEntry.js",
+            'footerMFE': "footerMFE@http://localhost:4203/remoteEntry.js",
+            'productListingMFE': "productListingMFE@http://localhost:4202/remoteEntry.js",
+            'productCreateUpdateMFE': "productCreateUpdateMFE@http://localhost:4204/remoteEntry.js",
+        },
 
         shared: share({
           "@angular/core": { singleton: true, strictVersion: true, requiredVersion: 'auto' }, 

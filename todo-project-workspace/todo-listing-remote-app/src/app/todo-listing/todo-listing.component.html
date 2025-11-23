@@ -1,0 +1,29 @@
+<div class="todo-listing-container">
+  <h2>Todo List</h2>
+  
+  <div class="todo-stats">
+    <p>Total: {{ todos.length }} | Completed: {{ todos.filter(t => t.completed).length }} | Pending: {{ todos.filter(t => !t.completed).length }}</p>
+  </div>
+
+  <div class="todo-list" *ngIf="todos.length > 0; else noTodos">
+    <div class="todo-item" *ngFor="let todo of todos" [class.completed]="todo.completed">
+      <div class="todo-content">
+        <input 
+          type="checkbox" 
+          [checked]="todo.completed" 
+          (change)="onToggleComplete(todo)"
+          class="todo-checkbox"
+        />
+        <span class="todo-name">{{ todo.name }}</span>
+        <span class="todo-date">{{ todo.createdAt | date:'short' }}</span>
+      </div>
+      <button class="delete-btn" (click)="onDelete(todo.id)">Delete</button>
+    </div>
+  </div>
+
+  <ng-template #noTodos>
+    <div class="no-todos">
+      <p>No todos available. Create a new todo to get started!</p>
+    </div>
+  </ng-template>
+</div>

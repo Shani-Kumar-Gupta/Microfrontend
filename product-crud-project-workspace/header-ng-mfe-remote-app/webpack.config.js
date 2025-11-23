@@ -1,15 +1,13 @@
 const { shareAll, withModuleFederationPlugin } = require('@angular-architects/module-federation/webpack');
 
 module.exports = withModuleFederationPlugin({
-
-  name: 'header-ng-mfe-remote-app',
-
+  name: 'headerMFE',
+  filename: 'remoteEntry.js',
   exposes: {
-    './Component': './src/app/app.component.ts',
+    './HeaderModule': './src/app/app.module.ts',
+    './HeaderComponent': './src/app/header/header.component.ts',
   },
-
   shared: {
     ...shareAll({ singleton: true, strictVersion: true, requiredVersion: 'auto' }),
   },
-
 });

@@ -1,0 +1,42 @@
+.header-container {
+  background-color: #34495e;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.app-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.like-count-display {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+
+  .like-icon {
+    font-size: 1.5rem;
+  }
+
+  .count-text {
+    color: #ecf0f1;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .app-title {
+    font-size: 1.5rem;
+  }
+}

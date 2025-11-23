@@ -1,0 +1,57 @@
+.footer-container {
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+  margin-top: auto;
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.like-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.like-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #c0392b;
+  }
+
+  .like-icon {
+    font-size: 18px;
+  }
+}
+
+.like-count {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+}
+
